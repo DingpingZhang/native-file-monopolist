@@ -1,0 +1,9 @@
+{
+  "name": "native-file-monopolist",
+  "version": "0.0.1",
+  "description": "Open a file handle exclusively and hold it, in order to other processes cannot access the file.",
+  "main": "index.js",
+  "repository": "https://github.com/DingpingZhang/native-file-monopolist",
+  "author": "Dingping Zhang",
+  "license": "MIT"
+}
