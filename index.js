@@ -1,6 +1,6 @@
-"use strict";
+'use strict';
 
 module.exports = (function () {
-  const addon = require("./build/Release/filemonopolist");
+  const addon = require('./build/Release/filemonopolist');
   return addon.FileMonopolist;
 })();

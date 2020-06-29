@@ -4,6 +4,12 @@ Open a file handle exclusively and hold it, in order to other processes cannot a
 
 ## Build
 
+```cmd
+yarn configure
+yarn build
+yarn test
+```
+
 ## Use
 
 ```js
