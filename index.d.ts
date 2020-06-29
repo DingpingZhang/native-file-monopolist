@@ -1,6 +1,6 @@
 export declare interface FileMonopolist {
-  filePath: string;
-  monopolized: boolean;
+  readonly filePath: string;
+  readonly monopolized: boolean;
   monopolize(): number;
   dispose(): boolean;
 }
