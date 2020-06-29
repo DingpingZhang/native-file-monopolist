@@ -14,5 +14,8 @@
     "configure": "node-gyp configure",
     "build": "node-gyp build",
     "test": "node ./test/test.js"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }
