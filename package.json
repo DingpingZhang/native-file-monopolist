@@ -1,8 +1,11 @@
 {
   "name": "native-file-monopolist",
   "version": "0.1.0",
+  "author": "Dingping Zhang",
+  "license": "MIT",
   "description": "Open a file handle exclusively and hold it, in order to other processes cannot access the file.",
   "main": "index.js",
+  "module": "index.js",
   "types": "index.d.ts",
   "engine": {
     "node": ">=8.0.0"
@@ -11,14 +14,10 @@
     "type": "git",
     "url": "git+https://github.com/DingpingZhang/native-file-monopolist.git"
   },
-  "author": "Dingping Zhang",
-  "license": "MIT",
+  "homepage": "https://github.com/DingpingZhang/native-file-monopolist",
   "scripts": {
     "configure": "node-gyp configure",
     "build": "node-gyp build",
     "test": "node ./test/test.js"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@dingpingzhang"
   }
 }
