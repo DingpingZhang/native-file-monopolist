@@ -4,21 +4,26 @@ Open a file handle exclusively and hold it, in order to other processes cannot a
 
 ## Install
 
-```cmd
+```console
 npm install native-file-monopolist
 ```
 
 Or
 
-```cmd
+```console
 yarn add native-file-monopolist
 ```
 
 ## Build
 
-```cmd
+```console
 yarn configure
 yarn build
+```
+
+## Test
+
+```console
 yarn test
 ```
 
