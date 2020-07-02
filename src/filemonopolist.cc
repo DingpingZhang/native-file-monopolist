@@ -4,7 +4,8 @@
 napi_ref FileMonopolist::constructor;
 
 FileMonopolist::FileMonopolist(char* filePath)
-	: isMonopolized_(false), filePath_(filePath), hFile_(nullptr), env_(nullptr), wrapper_(nullptr) {}
+	: isMonopolized_(false), filePath_(filePath), hFile_(nullptr), env_(nullptr), wrapper_(nullptr) {
+}
 
 FileMonopolist::~FileMonopolist() {
 	free(filePath_);
@@ -103,9 +104,15 @@ napi_value FileMonopolist::Monopolize(napi_env env, napi_callback_info info) {
 	FileMonopolist* self;
 	GetThis(env, info, reinterpret_cast<void**>(&self));
 
+	napi_value result;
+	if (self->isMonopolized_) {
+		status = napi_create_int64(env, 0, &result);
+		assert(status == napi_ok);
+		return result;
+	}
+
 	HANDLE hFile = CreateFile(self->filePath_, GENERIC_READ | GENERIC_WRITE, 0, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
 
-	napi_value result;
 	if (hFile == INVALID_HANDLE_VALUE) {
 		status = napi_create_int64(env, GetLastError(), &result);
 		assert(status == napi_ok);
@@ -137,8 +144,7 @@ napi_value FileMonopolist::Dispose(napi_env env, napi_callback_info info) {
 	return result;
 }
 
-napi_value FileMonopolist::GetFilePath(napi_env env, napi_callback_info info)
-{
+napi_value FileMonopolist::GetFilePath(napi_env env, napi_callback_info info) {
 	napi_status status;
 
 	FileMonopolist* self;
@@ -150,8 +156,7 @@ napi_value FileMonopolist::GetFilePath(napi_env env, napi_callback_info info)
 	return result;
 }
 
-napi_value FileMonopolist::GetMonopolized(napi_env env, napi_callback_info info)
-{
+napi_value FileMonopolist::GetMonopolized(napi_env env, napi_callback_info info) {
 	napi_status status;
 
 	FileMonopolist* self;
