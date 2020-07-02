@@ -1,6 +1,6 @@
 {
   "name": "native-file-monopolist",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "author": "Dingping Zhang",
   "license": "MIT",
   "description": "Open a file handle exclusively and hold it, in order to other processes cannot access the file.",
