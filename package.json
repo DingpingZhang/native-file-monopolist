@@ -18,6 +18,6 @@
   "scripts": {
     "configure": "node-gyp configure",
     "build": "node-gyp build",
-    "test": "node ./test/test.js"
+    "test": "node ./test/file-monopolist.test.js"
   }
 }
