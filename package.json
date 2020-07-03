@@ -1,6 +1,6 @@
 {
   "name": "native-file-monopolist",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "author": "Dingping Zhang",
   "license": "MIT",
   "description": "Open a file handle exclusively and hold it, in order to other processes cannot access the file.",
@@ -19,5 +19,12 @@
     "configure": "node-gyp configure",
     "build": "node-gyp build",
     "test": "node ./test/file-monopolist.test.js"
-  }
+  },
+  "keywords": [
+    "native",
+    "file-system",
+    "win",
+    "win32-api",
+    "c++"
+  ]
 }

@@ -32,9 +32,7 @@ yarn test
 ```js
 import { FileMonopolist } from 'native-file-monopolist';
 
-const ERROR_SHARING_VIOLATION = 0x00000020;
 const filePath = 'C:\\your-file-path';
-
 const monopolist = new FileMonopolist(filePath);
 
 console.log(monopolist.monopolized); // false

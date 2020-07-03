@@ -1,3 +1,7 @@
+// Type definitions for native-file-monopolist
+// Project: native-file-monopolist
+// Definitions by: Dingping Zhang
+
 /**
  * Represents the holder of a handle to the specified file.
  *
